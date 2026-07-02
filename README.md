@@ -1,55 +1,46 @@
-# Z3apps
-Apps made for the RG35xx Family
+# Z3vimm - Vimm ROM Downloader
 
-Might work on other handhelds too, Output uses linux framebuffer so it is compatible with any linux installation.
-The framework is robust and modular, and can be used to build further apps. Feel free to contribute or fork this repository to make your own apps. Dont foget to give credit though!
+A Python-based ROM downloader tool for the RG34xx SP and RG35xx family handhelds.
 
-## Installation/Updating The App
+## Quick Start
 
-1. Copy the [install-Z3apps.sh](https://github.com/Z3R0C1PH3R/Z3apps/releases/download/v0.2/install-Z3apps.sh) file into your Roms/APPS folder and run it from the APPS menu after making sure that you are on the latest firmware(tested on 240822), the **WIFI is connected**, the **correct time** is set in settings.
-3. After a few minutes your device would restart which means the install/update was successful, you may remove the install-Z3apps.sh file. If it doesnt restart and just exits then the install probably failed, check the log files.
-
-NOTE: The app uses a default API Key, but it has a limited Quota so the app might not work then, To fix this, you can make your own YouTube API Key and place it in the Roms/APPS/Z3apps/youtube-api-v3.key file after step 1. Refer [Step By Step Guide to Generate a Key](https://github.com/Z3R0C1PH3R/Z3apps/wiki/Adding-your-own-API-Key).
+```bash
+chmod +x install-vimm-downloader.sh
+./install-vimm-downloader.sh
+```
 
 ## Usage
 
-1. You can use the YouTube-Z3 app in the APPS menu to start the YouTube Search, a keyboard pops up
-2. Use the Dpad to navivgate around, press A to enter the character.
-3. Select the ✓ button to continue, The search result window opens where you can select the video you like, use the Left and Right buttons on the Dpad to see details about the different results and press A on any of them to play that video, Press B to go back.
-4. While the video is playing you have the following controls:
+**Interactive Mode:**
+```bash
+./vimm-downloader/vimm-downloader
+```
 
-| Button          | Function                      |
-|-----------------|-------------------------------|
-| A               | Pause/Play                    |
-| B               | Go Back                       |
-| X               | Mute/Unmute                   |
-| Y               | Show Progress                 |
-| Dpad Right/Left | Seek 10s forward or backwards |
-| Dpad Up/Down    | Control Volume by 10%         |
-| Volume +/-      | Control Volume by 2%          |
-| Select          | Go to start of video          |
-| Start           | Go to end of video            |
-| L1/R1           | Seek 10% forward or backward  |
-| Menu            | Exit                          |
+**Command-line Mode:**
+```bash
+./vimm-downloader/vimm-downloader --search "Super Mario Bros" --system nes
+./vimm-downloader/vimm-downloader --list
+./vimm-downloader/vimm-downloader --extract archive.zip
+```
 
-Enjoy :)
+## Supported Systems
 
-## Recent Changes (v0.2)
+- NES, SNES, Game Boy, GBC, GBA
+- Sega Genesis, Master System, Game Gear  
+- PlayStation 1, Nintendo 64
 
-1. Installation Script now Displays progress.
-1. UI is much faster (Using numpy)
+## Features
 
+✅ Search Vimm's Lair for ROMs  
+✅ Download with progress tracking  
+✅ Organize ROMs by system  
+✅ Extract ZIP, 7Z, RAR archives  
+✅ Manage downloaded ROMs  
 
-## Older Changes (v0.1)
-   
-1. B Works as a back button now.
-1. Fixed video stuck on buffering bug.
-1. Thumbnails were added.
-1. Fixed bugs (blank screen sometimes when started).
-1. Added Loading and Searching screens.
+## Documentation
 
-## Known Issues
+See [VIMM_DOWNLOADER.md](VIMM_DOWNLOADER.md) for detailed documentation, installation instructions, and troubleshooting.
 
-~1. Live streams take really long to load and then freeze up.~ (Seems to be fixed after the latest update)
+## License
 
-##### If you like my work and want to say thanks, or encourage me to do more, you can [buy me a coffee](https://buymeacoffee.com/z3r0c1ph3r) or a [ko-fi!](https://ko-fi.com/z3r0c1ph3r)
+GPL-3.0 (See LICENSE file)
